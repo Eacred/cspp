@@ -1,4 +1,4 @@
-// Copyright (c) 2019 The Decred developers
+// Copyright (c) 2019 The Eacred developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/Eacred/ecrd/chaincfg/chainhash"
+	"github.com/Eacred/eacrd/chaincfg/chainhash"
 )
 
 // MaxHeaderProofHashes is the maximum number of header commitment inclusion
@@ -32,7 +32,7 @@ type MsgCFilterV2 struct {
 	ProofHashes []chainhash.Hash
 }
 
-// BtcDecode decodes r using the Decred protocol encoding into the receiver.
+// BtcDecode decodes r using the Eacred protocol encoding into the receiver.
 // This is part of the Message interface implementation.
 func (msg *MsgCFilterV2) BtcDecode(r io.Reader, pver uint32) error {
 	if pver < CFilterV2Version {
@@ -80,7 +80,7 @@ func (msg *MsgCFilterV2) BtcDecode(r io.Reader, pver uint32) error {
 	return nil
 }
 
-// BtcEncode encodes the receiver to w using the Decred protocol encoding.
+// BtcEncode encodes the receiver to w using the Eacred protocol encoding.
 // This is part of the Message interface implementation.
 func (msg *MsgCFilterV2) BtcEncode(w io.Writer, pver uint32) error {
 	if pver < CFilterV2Version {

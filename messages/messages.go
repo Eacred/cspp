@@ -50,7 +50,7 @@ import (
 
 	"github.com/Eacred/cspp/dcnet"
 	"github.com/Eacred/cspp/x25519"
-	"github.com/Eacred/ecrd/crypto/blake256"
+	"github.com/Eacred/eacrd/crypto/blake256"
 	"golang.org/x/crypto/ed25519"
 )
 

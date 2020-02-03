@@ -9,7 +9,7 @@ import (
 
 	"github.com/Eacred/cspp/chacha20prng"
 	"github.com/Eacred/cspp/x25519"
-	"github.com/Eacred/ecrd/crypto/blake256"
+	"github.com/Eacred/eacrd/crypto/blake256"
 )
 
 // SRMixPads creates a vector of exponential DC-net pads from a vector of

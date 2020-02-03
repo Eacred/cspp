@@ -1,6 +1,6 @@
 // Copyright (c) 2017 The btcsuite developers
 // Copyright (c) 2017 The Lightning Network Developers
-// Copyright (c) 2018-2019 The Decred developers
+// Copyright (c) 2018-2019 The Eacred developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -10,7 +10,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/Eacred/ecrd/chaincfg/chainhash"
+	"github.com/Eacred/eacrd/chaincfg/chainhash"
 )
 
 const (

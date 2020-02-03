@@ -1,5 +1,5 @@
-# decred.org/cspp v0.2.0
-decred.org/cspp
+# github.com/Eacred/cspp v0.2.0
+github.com/Eacred/cspp
 github.com/Eacred/cspp/chacha20prng
 github.com/Eacred/cspp/coinjoin
 github.com/Eacred/cspp/dcnet
@@ -9,18 +9,18 @@ github.com/Eacred/cspp/messages
 github.com/Eacred/cspp/server
 github.com/Eacred/cspp/solver
 github.com/Eacred/cspp/x25519
-# github.com/Eacred/ecrd/chaincfg/chainhash v1.0.5
-github.com/Eacred/ecrd/chaincfg/chainhash
-# github.com/Eacred/ecrd/crypto/blake256 v1.0.1
-github.com/Eacred/ecrd/crypto/blake256
-# github.com/Eacred/ecrd/wire v1.3.2
-github.com/Eacred/ecrd/wire
-# github.com/decred/dcrd/chaincfg/chainhash v1.0.2
-github.com/decred/dcrd/chaincfg/chainhash
-# github.com/decred/dcrd/crypto/blake256 v1.0.0
-github.com/decred/dcrd/crypto/blake256
-# github.com/decred/dcrd/wire v1.2.0
-github.com/decred/dcrd/wire
+# github.com/Eacred/eacrd/chaincfg/chainhash v1.0.5
+github.com/Eacred/eacrd/chaincfg/chainhash
+# github.com/Eacred/eacrd/crypto/blake256 v1.0.1
+github.com/Eacred/eacrd/crypto/blake256
+# github.com/Eacred/eacrd/wire v1.3.2
+github.com/Eacred/eacrd/wire
+# github.com/Eacred/eacrd/chaincfg/chainhash v1.0.2
+github.com/Eacred/eacrd/chaincfg/chainhash
+# github.com/Eacred/eacrd/crypto/blake256 v1.0.0
+github.com/Eacred/eacrd/crypto/blake256
+# github.com/Eacred/eacrd/wire v1.2.0
+github.com/Eacred/eacrd/wire
 # github.com/gorilla/websocket v1.4.0
 github.com/gorilla/websocket
 # github.com/jrick/wsrpc/v2 v2.2.0

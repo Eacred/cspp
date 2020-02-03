@@ -1,5 +1,5 @@
 // Copyright (c) 2013-2016 The btcsuite developers
-// Copyright (c) 2015-2018 The Decred developers
+// Copyright (c) 2015-2018 The Eacred developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -11,15 +11,15 @@ import (
 	"io"
 	"unicode/utf8"
 
-	"github.com/decred/dcrd/chaincfg/chainhash"
+	"github.com/Eacred/eacrd/chaincfg/chainhash"
 )
 
-// MessageHeaderSize is the number of bytes in a Decred message header.
-// Decred network (magic) 4 bytes + command 12 bytes + payload length 4 bytes +
+// MessageHeaderSize is the number of bytes in a Eacred message header.
+// Eacred network (magic) 4 bytes + command 12 bytes + payload length 4 bytes +
 // checksum 4 bytes.
 const MessageHeaderSize = 24
 
-// CommandSize is the fixed size of all commands in the common Decred message
+// CommandSize is the fixed size of all commands in the common Eacred message
 // header.  Shorter commands must be zero padded.
 const CommandSize = 12
 
@@ -57,7 +57,7 @@ const (
 	CmdCFTypes        = "cftypes"
 )
 
-// Message is an interface that describes a Decred message.  A type that
+// Message is an interface that describes a Eacred message.  A type that
 // implements Message has complete control over the representation of its data
 // and may therefore contain additional or fewer fields than those which
 // are used directly in the protocol encoded message.
@@ -157,7 +157,7 @@ func makeEmptyMessage(command string) (Message, error) {
 	return msg, nil
 }
 
-// messageHeader defines the header structure for all Decred protocol messages.
+// messageHeader defines the header structure for all Eacred protocol messages.
 type messageHeader struct {
 	magic    CurrencyNet // 4 bytes
 	command  string      // 12 bytes
@@ -165,7 +165,7 @@ type messageHeader struct {
 	checksum [4]byte     // 4 bytes
 }
 
-// readMessageHeader reads a Decred message header from r.
+// readMessageHeader reads a Eacred message header from r.
 func readMessageHeader(r io.Reader) (int, *messageHeader, error) {
 	// Since readElements doesn't return the amount of bytes read, attempt
 	// to read the entire header into a buffer first in case there is a
@@ -209,7 +209,7 @@ func discardInput(r io.Reader, n uint32) {
 	}
 }
 
-// WriteMessageN writes a Decred Message to w including the necessary header
+// WriteMessageN writes a Eacred Message to w including the necessary header
 // information and returns the number of bytes written.    This function is the
 // same as WriteMessage except it also returns the number of bytes written.
 func WriteMessageN(w io.Writer, msg Message, pver uint32, dcrnet CurrencyNet) (int, error) {
@@ -277,7 +277,7 @@ func WriteMessageN(w io.Writer, msg Message, pver uint32, dcrnet CurrencyNet) (i
 	return totalBytes, err
 }
 
-// WriteMessage writes a Decred Message to w including the necessary header
+// WriteMessage writes a Eacred Message to w including the necessary header
 // information.  This function is the same as WriteMessageN except it doesn't
 // doesn't return the number of bytes written.  This function is mainly provided
 // for backwards compatibility with the original API, but it's also useful for
@@ -287,8 +287,8 @@ func WriteMessage(w io.Writer, msg Message, pver uint32, dcrnet CurrencyNet) err
 	return err
 }
 
-// ReadMessageN reads, validates, and parses the next Decred Message from r for
-// the provided protocol version and Decred network.  It returns the number of
+// ReadMessageN reads, validates, and parses the next Eacred Message from r for
+// the provided protocol version and Eacred network.  It returns the number of
 // bytes read in addition to the parsed Message and raw bytes which comprise the
 // message.  This function is the same as ReadMessage except it also returns the
 // number of bytes read.
@@ -309,7 +309,7 @@ func ReadMessageN(r io.Reader, pver uint32, dcrnet CurrencyNet) (int, Message, [
 
 	}
 
-	// Check for messages from the wrong Decred network.
+	// Check for messages from the wrong Eacred network.
 	if hdr.magic != dcrnet {
 		discardInput(r, hdr.length)
 		str := fmt.Sprintf("message from other network [%v]", hdr.magic)
@@ -372,8 +372,8 @@ func ReadMessageN(r io.Reader, pver uint32, dcrnet CurrencyNet) (int, Message, [
 	return totalBytes, msg, payload, nil
 }
 
-// ReadMessage reads, validates, and parses the next Decred Message from r for
-// the provided protocol version and Decred network.  It returns the parsed
+// ReadMessage reads, validates, and parses the next Eacred Message from r for
+// the provided protocol version and Eacred network.  It returns the parsed
 // Message and raw bytes which comprise the message.  This function only differs
 // from ReadMessageN in that it doesn't return the number of bytes read.  This
 // function is mainly provided for backwards compatibility with the original

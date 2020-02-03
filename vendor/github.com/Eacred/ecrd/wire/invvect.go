@@ -1,5 +1,5 @@
 // Copyright (c) 2013-2016 The btcsuite developers
-// Copyright (c) 2015-2016 The Decred developers
+// Copyright (c) 2015-2016 The Eacred developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -9,12 +9,12 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/Eacred/ecrd/chaincfg/chainhash"
+	"github.com/Eacred/eacrd/chaincfg/chainhash"
 )
 
 const (
 	// MaxInvPerMsg is the maximum number of inventory vectors that can be in a
-	// single Decred inv message.
+	// single Eacred inv message.
 	MaxInvPerMsg = 50000
 
 	// Maximum payload size for an inventory vector.
@@ -49,7 +49,7 @@ func (invtype InvType) String() string {
 	return fmt.Sprintf("Unknown InvType (%d)", uint32(invtype))
 }
 
-// InvVect defines a Decred inventory vector which is used to describe data,
+// InvVect defines a Eacred inventory vector which is used to describe data,
 // as specified by the Type field, that a peer wants, has, or does not have to
 // another peer.
 type InvVect struct {

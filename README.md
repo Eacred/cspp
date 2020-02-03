@@ -9,7 +9,7 @@ CoinShuffle++
 
 This module provides client and server implementations to execute the
 [CoinShuffle++](https://crypsys.mmci.uni-saarland.de/projects/FastDC/paper.pdf)
-mixing protocol.  While intended to be used to create Decred CoinJoin
+mixing protocol.  While intended to be used to create Eacred CoinJoin
 transactions, the client and server packages are generic enough to anonymously
 mix and join elements of any group.
 

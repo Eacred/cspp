@@ -28,7 +28,7 @@ usage: wsrpc address [flags] method [arg]
         Password
   -u string
         User
-$ wsrpc wss://dcrd0.i.zettaport.com:9109/ws -c dcrd0.pem -u jrick -p sekrit getinfo
+$ wsrpc wss://ecrd0.i.zettaport.com:9109/ws -c ecrd0.pem -u jrick -p sekrit getinfo
 {
   "version": 1050000,
   "protocolversion": 6,
@@ -41,7 +41,7 @@ $ wsrpc wss://dcrd0.i.zettaport.com:9109/ws -c dcrd0.pem -u jrick -p sekrit geti
   "relayfee": 0.0001,
   "errors": ""
 }
-$ wsrpc wss://dcrd0.i.zettaport.com:9109/ws -c dcrd0.pem -u jrick -p sekrit getblockhash '[324795]'
+$ wsrpc wss://ecrd0.i.zettaport.com:9109/ws -c ecrd0.pem -u jrick -p sekrit getblockhash '[324795]'
 "0000000000000000235b1210221d412c428237175dbb0aef202277d1706b9312"
 ```
 
@@ -64,9 +64,9 @@ flags only apply to the initial connection.
 ```
 $ eval `wsrpc-agent`
 Agent listening on /tmp/wsrpc732266934/agent.19981
-$ wsrpc wss://dcrd0.i.zettaport.com:9109/ws -c dcrd0.pem -u jrick -p sekrit getblockhash '[324795]'
+$ wsrpc wss://ecrd0.i.zettaport.com:9109/ws -c ecrd0.pem -u jrick -p sekrit getblockhash '[324795]'
 "0000000000000000235b1210221d412c428237175dbb0aef202277d1706b9312"
-$ wsrpc wss://dcrd0.i.zettaport.com:9109/ws getblockhash '[324795]'
+$ wsrpc wss://ecrd0.i.zettaport.com:9109/ws getblockhash '[324795]'
 "0000000000000000235b1210221d412c428237175dbb0aef202277d1706b9312"
 ```
 

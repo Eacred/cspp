@@ -1,5 +1,5 @@
 // Copyright (c) 2013-2016 The btcsuite developers
-// Copyright (c) 2015-2017 The Decred developers
+// Copyright (c) 2015-2017 The Eacred developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -10,7 +10,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/Eacred/ecrd/chaincfg/chainhash"
+	"github.com/Eacred/eacrd/chaincfg/chainhash"
 )
 
 // defaultTransactionAlloc is the default size used for the backing array
@@ -47,7 +47,7 @@ type TxLoc struct {
 	TxLen   int
 }
 
-// MsgBlock implements the Message interface and represents a decred
+// MsgBlock implements the Message interface and represents a eacred
 // block message.  It is used to deliver block and transaction information in
 // response to a getdata message (MsgGetData) for a given block hash.
 type MsgBlock struct {
@@ -79,7 +79,7 @@ func (msg *MsgBlock) ClearSTransactions() {
 	msg.STransactions = make([]*MsgTx, 0, defaultTransactionAlloc)
 }
 
-// BtcDecode decodes r using the Decred protocol encoding into the receiver.
+// BtcDecode decodes r using the Eacred protocol encoding into the receiver.
 // This is part of the Message interface implementation.
 // See Deserialize for decoding blocks stored to disk, such as in a database, as
 // opposed to decoding blocks from the wire.
@@ -145,7 +145,7 @@ func (msg *MsgBlock) BtcDecode(r io.Reader, pver uint32) error {
 // Deserialize decodes a block from r into the receiver using a format that is
 // suitable for long-term storage such as a database while respecting the
 // Version field in the block.  This function differs from BtcDecode in that
-// BtcDecode decodes from the Decred wire protocol as it was sent across the
+// BtcDecode decodes from the Eacred wire protocol as it was sent across the
 // network.  The wire encoding can technically differ depending on the protocol
 // version and doesn't even really need to match the format of a stored block at
 // all.  As of the time this comment was written, the encoded block is the same
@@ -246,7 +246,7 @@ func (msg *MsgBlock) DeserializeTxLoc(r *bytes.Buffer) ([]TxLoc, []TxLoc, error)
 	return txLocs, sTxLocs, nil
 }
 
-// BtcEncode encodes the receiver to w using the Decred protocol encoding.
+// BtcEncode encodes the receiver to w using the Eacred protocol encoding.
 // This is part of the Message interface implementation.
 // See Serialize for encoding blocks to be stored to disk, such as in a
 // database, as opposed to encoding blocks for the wire.
@@ -286,7 +286,7 @@ func (msg *MsgBlock) BtcEncode(w io.Writer, pver uint32) error {
 // Serialize encodes the block to w using a format that suitable for long-term
 // storage such as a database while respecting the Version field in the block.
 // This function differs from BtcEncode in that BtcEncode encodes the block to
-// the Decred wire protocol in order to be sent across the network.  The wire
+// the Eacred wire protocol in order to be sent across the network.  The wire
 // encoding can technically differ depending on the protocol version and doesn't
 // even really need to match the format of a stored block at all.  As of the
 // time this comment was written, the encoded block is the same in both
@@ -377,7 +377,7 @@ func (msg *MsgBlock) STxHashes() []chainhash.Hash {
 	return hashList
 }
 
-// NewMsgBlock returns a new Decred block message that conforms to the
+// NewMsgBlock returns a new Eacred block message that conforms to the
 // Message interface.  See MsgBlock for details.
 func NewMsgBlock(blockHeader *BlockHeader) *MsgBlock {
 	return &MsgBlock{

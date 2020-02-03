@@ -1,5 +1,5 @@
 // Copyright (c) 2013-2016 The btcsuite developers
-// Copyright (c) 2015-2019 The Decred developers
+// Copyright (c) 2015-2019 The Eacred developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -9,14 +9,14 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/Eacred/ecrd/chaincfg/chainhash"
+	"github.com/Eacred/eacrd/chaincfg/chainhash"
 )
 
 // MaxBlockLocatorsPerMsg is the maximum number of block locator hashes allowed
 // per message.
 const MaxBlockLocatorsPerMsg = 500
 
-// MsgGetBlocks implements the Message interface and represents a decred
+// MsgGetBlocks implements the Message interface and represents a eacred
 // getblocks message.  It is used to request a list of blocks starting after the
 // last known hash in the slice of block locator hashes.  The list is returned
 // via an inv message (MsgInv) and is limited by a specific hash to stop at or
@@ -49,7 +49,7 @@ func (msg *MsgGetBlocks) AddBlockLocatorHash(hash *chainhash.Hash) error {
 	return nil
 }
 
-// BtcDecode decodes r using the Decred protocol encoding into the receiver.
+// BtcDecode decodes r using the Eacred protocol encoding into the receiver.
 // This is part of the Message interface implementation.
 func (msg *MsgGetBlocks) BtcDecode(r io.Reader, pver uint32) error {
 	err := readElement(r, &msg.ProtocolVersion)
@@ -84,7 +84,7 @@ func (msg *MsgGetBlocks) BtcDecode(r io.Reader, pver uint32) error {
 	return readElement(r, &msg.HashStop)
 }
 
-// BtcEncode encodes the receiver to w using the Decred protocol encoding.
+// BtcEncode encodes the receiver to w using the Eacred protocol encoding.
 // This is part of the Message interface implementation.
 func (msg *MsgGetBlocks) BtcEncode(w io.Writer, pver uint32) error {
 	count := len(msg.BlockLocatorHashes)
@@ -129,7 +129,7 @@ func (msg *MsgGetBlocks) MaxPayloadLength(pver uint32) uint32 {
 		(MaxBlockLocatorsPerMsg * chainhash.HashSize) + chainhash.HashSize
 }
 
-// NewMsgGetBlocks returns a new Decred getblocks message that conforms to the
+// NewMsgGetBlocks returns a new Eacred getblocks message that conforms to the
 // Message interface using the passed parameters and defaults for the remaining
 // fields.
 func NewMsgGetBlocks(hashStop *chainhash.Hash) *MsgGetBlocks {

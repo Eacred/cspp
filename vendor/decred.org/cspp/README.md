@@ -1,15 +1,15 @@
 CoinShuffle++
 =============
 
-[![Build Status](https://github.com/decred/cspp/workflows/Build%20and%20Test/badge.svg)](https://github.com/decred/cspp/actions)
+[![Build Status](https://github.com/Eacred/cspp/workflows/Build%20and%20Test/badge.svg)](https://github.com/Eacred/cspp/actions)
 [![ISC License](https://img.shields.io/badge/license-ISC-blue.svg)](http://copyfree.org)
-[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](https://godoc.org/decred.org/cspp)
+[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](https://godoc.org/github.com/Eacred/cspp)
 
 ## Overview
 
 This module provides client and server implementations to execute the
 [CoinShuffle++](https://crypsys.mmci.uni-saarland.de/projects/FastDC/paper.pdf)
-mixing protocol.  While intended to be used to create Decred CoinJoin
+mixing protocol.  While intended to be used to create Eacred CoinJoin
 transactions, the client and server packages are generic enough to anonymously
 mix and join elements of any group.
 

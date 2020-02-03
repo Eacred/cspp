@@ -1,5 +1,5 @@
 // Copyright (c) 2013-2015 The btcsuite developers
-// Copyright (c) 2015-2016 The Decred developers
+// Copyright (c) 2015-2016 The Eacred developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/decred/dcrd/chaincfg/chainhash"
+	"github.com/Eacred/eacrd/chaincfg/chainhash"
 )
 
 // MaxMSBlocksAtHeadPerMsg is the maximum number of block hashes allowed
@@ -188,7 +188,7 @@ func (msg *MsgMiningState) MaxPayloadLength(pver uint32) uint32 {
 		chainhash.HashSize)
 }
 
-// NewMsgMiningState returns a new Decred miningstate message that conforms to
+// NewMsgMiningState returns a new Eacred miningstate message that conforms to
 // the Message interface using the defaults for the fields.
 func NewMsgMiningState() *MsgMiningState {
 	return &MsgMiningState{

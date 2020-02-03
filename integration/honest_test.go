@@ -20,7 +20,7 @@ import (
 	"github.com/Eacred/cspp/coinjoin"
 	"github.com/Eacred/cspp/internal/nettest"
 	"github.com/Eacred/cspp/server"
-	"github.com/Eacred/ecrd/wire"
+	"github.com/Eacred/eacrd/wire"
 	"golang.org/x/crypto/ed25519"
 )
 

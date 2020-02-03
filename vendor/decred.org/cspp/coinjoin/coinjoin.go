@@ -1,4 +1,4 @@
-// Package coinjoin defines a builder type for creating Decred CoinJoin transactions.
+// Package coinjoin defines a builder type for creating Eacred CoinJoin transactions.
 package coinjoin
 
 import (
@@ -15,7 +15,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/decred/dcrd/wire"
+	"github.com/Eacred/eacrd/wire"
 )
 
 var shuffleRand *mathrand.Rand
@@ -42,7 +42,7 @@ type Caller interface {
 	Call(ctx context.Context, method string, res interface{}, args ...interface{}) error
 }
 
-// Tx is a Decred CoinJoin transaction builder.  It is intended for usage by
+// Tx is a Eacred CoinJoin transaction builder.  It is intended for usage by
 // CoinJoin servers, not clients.
 type Tx struct {
 	Tx            wire.MsgTx
@@ -116,9 +116,9 @@ func (sc ScriptClass) script(message []byte) []byte {
 
 func (sc ScriptClass) version() uint16 { return 0 }
 
-const descname = "coinjoin-decred"
+const descname = "coinjoin-eacred"
 
-// EncodeDesc encodes a description defining the parameters for a Decred coinjoin.
+// EncodeDesc encodes a description defining the parameters for a Eacred coinjoin.
 func EncodeDesc(sc ScriptClass, amount int64, txVersion uint16, lockTime, expiry uint32) []byte {
 	buf := new(bytes.Buffer)
 	enc := gob.NewEncoder(buf)
@@ -319,7 +319,7 @@ func (t *Tx) Shuffle() {
 	})
 }
 
-// PublishMix publishes a transaction using the dcrd sendrawtransaction RPC.
+// PublishMix publishes a transaction using the ecrd sendrawtransaction RPC.
 func (t *Tx) PublishMix(ctx context.Context) error {
 	b := new(strings.Builder)
 	err := t.Tx.Serialize(hex.NewEncoder(b))

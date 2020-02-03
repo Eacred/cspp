@@ -1,10 +1,12 @@
 cloud.google.com/go v0.26.0/go.mod h1:aQUYkXzVsufM+DwF1aE+0xfcU+56JwCaLick0ClmMTw=
+decred.org/cspp v0.2.0 h1:SdwdoGT2wZenkczeDxzcKwoAA55Y0Ti3aZslabBORvA=
 decred.org/cspp v0.2.0/go.mod h1:KVnB49sueBFCldRa/ivZCaWZbrPNEiXWwxHCf1jTYKI=
+eacred.org/cspp v0.2.0 h1:SdwdoGT2wZenkczeDxzcKwoAA55Y0Ti3aZslabBORvA=
+eacred.org/cspp v0.2.0/go.mod h1:KVnB49sueBFCldRa/ivZCaWZbrPNEiXWwxHCf1jTYKI=
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
 github.com/Eacred/base58 v1.0.6/go.mod h1:RdbLH+S2PXj1pZUNO9kJi7KDr+B/k0GdyiAHsOJ0z8s=
 github.com/Eacred/cspp v0.2.1/go.mod h1:L2wxIeEm4mUB+Dt4ag349dKcEu3e54Or1dsbO3laPqw=
 github.com/Eacred/eacrd v0.0.0-20200130055725-b3821f5745bf/go.mod h1:eyc4RdZRTO9z9hnMEdnG1fs9qc88swnAHVQpne6w8gc=
-github.com/Eacred/eacrd v0.0.0-20200130225131-86d11748c652 h1:n6RA3GcJ+GueYUR/tQcmTOAyn5KRsQtuJmPsXv4sXKI=
 github.com/Eacred/eacrd v0.0.0-20200130225131-86d11748c652/go.mod h1:JEb1izmtgf1vZRS0E6sdtPaBL3KgMRg+5EEsh6XQ+f0=
 github.com/Eacred/eacrwallet v0.0.0-20200130085721-a8bc15909293/go.mod h1:wMHKIbXiAhV63MphoLgu9p2hfUSf3RQecmFCNTLFVpg=
 github.com/Eacred/ecrd/chaincfg/chainhash v1.0.5/go.mod h1:i7J8YxTjTAq3x/1ERZbp2fNtqhqhWzENkFcO9PRDBt8=
